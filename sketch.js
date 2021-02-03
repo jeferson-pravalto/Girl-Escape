@@ -152,9 +152,9 @@ function reset(){
 function spawnObstacles() {
    if (frameCount % 80 === 0 && score>100){
      var obstacle = createSprite(600,450,10,40);
-     obstacle.velocityX = -6 - (score/300);
+     obstacle.velocityX = -6.5 - (score/300);
      obstacle.addImage(obstacle1);
-     obstacle.scale=0.2;
+     obstacle.scale=0.15;
      obstaclesGroup.add(obstacle);
      obstacle.setCollider("circle",0,0,1);
    }
