@@ -100,8 +100,13 @@ if (gameState===PLAY){
    //Jump Girl 
  if((keyDown("space")&& girl.y >= 410)) {
    girl.velocityY = -12;
+   girl.pause();
     jumpSound.play();
-  }  
+  }  else if (girl.y>410){
+    girl.play();
+  } else if (girl.y<410){
+    girl.pause();
+  }
   
   //GameState END
     if (girl.isTouching(obstaclesGroup)){
